@@ -1,0 +1,19 @@
+pragma solidity ^0.4.24;
+
+contract Greeter {
+    address greeter;
+    string greeting;
+    
+    constructor(string _greeter) public{
+        greeter = msg.sender;
+        greeting = _greeter;
+    }
+    
+    function greet() public view returns (string){
+        return greeting;
+    }
+    
+    function setGreeting(string _newGreeting) public{
+        greeting = _newGreeting;
+    }
+}
